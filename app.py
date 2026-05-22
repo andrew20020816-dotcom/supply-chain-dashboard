@@ -549,6 +549,31 @@ def page_bom():
             f'{label}</span>'
         )
 
+    # ── 成果橫幅 ───────────────────────────────────────────
+    st.markdown("""
+<div style="
+    background: linear-gradient(135deg, #0d2e1a, #1a5c35);
+    border: 1px solid #2ecc71aa;
+    border-radius: 14px;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 0 24px rgba(46,204,113,0.15);
+">
+    <span style="font-size:2rem; line-height:1;">✅</span>
+    <div>
+        <div style="font-size:1.15rem; font-weight:700; color:#2ecc71; letter-spacing:0.3px;">
+            任務完成
+        </div>
+        <div style="font-size:0.95rem; color:#a8e6c0; margin-top:3px;">
+            Computex 2026 展前全數備料到位，三款產品順利展出
+        </div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
     # ── 頁面標題 ───────────────────────────────────────────
     st.title("📋 BOM 物料追蹤 Dashboard")
     st.caption("Computex 2026 備料進度 · 即時監控")
