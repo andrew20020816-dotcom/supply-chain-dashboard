@@ -838,6 +838,42 @@ def page_bom():
             <h3>❌ 取消項目</h3><h1>{total_cancel}</h1>
             <p>已從計劃移除</p></div>""", unsafe_allow_html=True)
 
+    st.markdown("---")
+
+    # ── 最終成果總結 ───────────────────────────────────────
+    st.markdown("""
+    <div style="
+        background: linear-gradient(135deg, #0d2b1a, #1a4a2e);
+        border: 1px solid #2e7d4f;
+        border-radius: 14px;
+        padding: 28px 32px;
+        margin-top: 8px;
+    ">
+        <div style="font-size:1.1rem; font-weight:800; color:#66bb6a; letter-spacing:1px; margin-bottom:16px;">
+            🏁 Computex 2026 最終成果
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; margin-bottom:20px;">
+            <div style="background:#0a1f12; border-radius:10px; padding:16px; text-align:center;">
+                <div style="font-size:2rem; font-weight:900; color:#66bb6a;">3 / 3</div>
+                <div style="font-size:0.82rem; color:#8fa88f; margin-top:6px;">產品如期展出</div>
+            </div>
+            <div style="background:#0a1f12; border-radius:10px; padding:16px; text-align:center;">
+                <div style="font-size:2rem; font-weight:900; color:#66bb6a;">59</div>
+                <div style="font-size:0.82rem; color:#8fa88f; margin-top:6px;">追蹤物料項目</div>
+            </div>
+            <div style="background:#0a1f12; border-radius:10px; padding:16px; text-align:center;">
+                <div style="font-size:2rem; font-weight:900; color:#ffa726;">6</div>
+                <div style="font-size:0.82rem; color:#8fa88f; margin-top:6px;">風險項目提前介入</div>
+            </div>
+        </div>
+        <div style="font-size:0.9rem; color:#a5c8a5; line-height:1.8;">
+            ✅ &nbsp;展前全數備料到位，MK2 / GA2 / PFA 三款產品順利於 Computex 2026 展出<br>
+            ✅ &nbsp;透過即時 Dashboard 監控，提前識別 PFA 產品 6 項風險物料並完成供應商協調<br>
+            ✅ &nbsp;展期間吸引多位回流客戶，對產品迭代進化給予正面回饋
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
 
 # ── 頁面路由 ──────────────────────────────────────────────
 if page == "Executive Dashboard":
@@ -850,3 +886,4 @@ elif page == "Operations":
     page_operations()
 elif page == "BOM 追蹤":
     page_bom()
+
